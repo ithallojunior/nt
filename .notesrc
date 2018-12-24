@@ -1,0 +1,7 @@
+{
+"EDITOR": "vim",
+"NOTES_PATH": ".notes/",
+"MARKER": ">>>",
+"REVERSE_MARKER": "|  "
+}
+#Finish the path with /
