@@ -3,8 +3,7 @@
 """
 author:  Ithallo J. A. Guimarães
 Note taking app
-"""
-import commands,tty, sys, termios, os
+""" import commands,tty, sys, termios, os
 from subprocess import call
 
 class notes:
@@ -78,7 +77,7 @@ class notes:
             if (sys.argv[1][0]=="-"):
                 print("Kept for commands")
             else:
-                self.file_to_edit = "".join(" " + i for i in sys.argv[1:])    
+                self.file_to_edit = "".join(i + " " for i in sys.argv[1:])[:-1]    
                 self._editor()
         
         #check for file path existence
