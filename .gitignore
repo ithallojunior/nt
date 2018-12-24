@@ -1,0 +1,7 @@
+# OS X files
+.DS_Store
+
+# program files
+.notes
+# vim files
+*.swp
