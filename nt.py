@@ -102,9 +102,11 @@ class notes:
                             mark = self.reverse_marker
                     except IndexError:
                         self._position = 0
+                    
+                    preview = commands.getoutput(' cat %s%s | awk "NR==1" '%(self.notes_path, i))
                     data = commands.getoutput(" ls -l %s%s"%(self.notes_path, i)).split()[5:8]
                     info = "".join(" " + j for j in data)
-                    print("%s %s - %s"%(mark, i, info ) )
+                    print("%s %s - %s : %s"%(mark, i, info, preview ) )
             else:
                 print("                   ------No files yet------")
             print("\n-----------------------------end---------------------------------") 
