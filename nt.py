@@ -3,7 +3,8 @@
 """
 author:  Ithallo J. A. Guimarães
 Note taking app
-""" import commands,tty, sys, termios, os
+"""
+import commands,tty, sys, termios, os
 from subprocess import call
 
 class notes:
