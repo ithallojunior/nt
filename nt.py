@@ -120,8 +120,6 @@ class notes:
             self._getchar() 
             #to quit
             if (self.cmd == "q"):
-                print("Quitting")
-                time.sleep(0.5)
                 self._clear()
                 #TODO commit to git here
                 break

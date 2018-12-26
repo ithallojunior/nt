@@ -36,9 +36,13 @@ def run():
                 return
             
             if (option=="full_install"):
-                with open(settings["TERMINALRC_PATH"] ,"a") as f:
-                    f.write("\nalias nt='python %s' \n"%(install_path+"nt.py"))
-                
+                try:
+                    with open(settings["RC_PATH"] ,"a") as f:
+                        f.write("\n#added by nt \nalias nt='python %s' \n"%(settings["PATH"]+"nt.py"))
+                    print("alias added to '%s'"%settings["RC_PATH"])
+                except IOError:
+                    print("Ops! Check the RC path")
+                    return
             print("Installed")
         else:
          print("Not installed, use python setup.py install or python setup.py full_install")

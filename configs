@@ -1,6 +1,6 @@
 {
 "EDITOR": "vim",
 "PATH": "/Users/ithallo/.scripts/",
-"TERMINALRC_PATH": "~/.zshellrc",
+"RC_PATH": "/Users/ithallo/.scripts/scripts.sh",
 "MARKER": "GREEN",
 }
