@@ -1,13 +1,11 @@
----
-
-author: Ithallo J. A. Guimarães
-title: nt - A simple note taking app for the terminal
-
----
+# nt - A simple note taking app for the terminal
 
 Simple note taking app for the terminal. It is currently written in python and
 I might in the future rewrite in shell script as it mostly binds commands from the
 terminal itself.
+
+![nt screen.](nt.png)
+
 
 ## Installing
 
