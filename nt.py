@@ -108,14 +108,16 @@ class notes:
                     
                     #preview = commands.getoutput(' cat %s%s | awk "NR==1" '%(self.notes_path, i))
                     with open(self.notes_path + i, "r") as f:
-                        preview = f.readline()
+                        preview = f.readline()[:-1]
 
                     data = commands.getoutput(" ls -l %s%s"%(self.notes_path, i)).split()[5:8]
-                    info = "".join(" " + j for j in data)
+                    info = "".join(j + " " for j in data)[:-1]
                     print("%s %s - %s : %s"%(mark, i, info, preview ) )
+                
+                print(self.no_marker+"\n\n[%s/%s]"%(self._position + 1, len(self.files)))
             else:
                 print(self.no_marker+"                   ------No files yet------                    ")
-            print(self.no_marker+"\n-----------------------------end---------------------------------") 
+            print(self.no_marker+"-----------------------------end---------------------------------") 
             #### commands
             self._getchar() 
             #to quit
